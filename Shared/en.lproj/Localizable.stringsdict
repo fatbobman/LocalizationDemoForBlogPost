@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tap add item</key>
+	<dict>
+		<key>NSStringDeviceSpecificRuleType</key>
+		<dict>
+			<key>iphone</key>
+			<string>Tap me</string>
+			<key>ipad</key>
+			<string>Tap me</string>
+			<key>mac</key>
+			<string>Click me</string>
+			<key>appletv</key>
+			<string>Select me</string>
+		</dict>
+	</dict>
+	<key>Pay for %lld drinks</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@drinks@</string>
+		<key>drinks</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string>I want to drink</string>
+			<key>one</key>
+			<string>Pay for one drink</string>
+			<key>other</key>
+			<string>Pay for %lld drinks</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

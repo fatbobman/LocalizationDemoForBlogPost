@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  LocalizationDemo_Start
+
+  Created by Yang Xu on 2021/6/23.
+  
+*/
+"Item" = "种类";
+"Quantity" = "数量";
+"Unit Price" = "单价";
+"Amount" = "合计";
+"Pay for %lld drinks" = "为%lld杯饮品付款";
+
+"tax rate" = "税率";
+"subtotal" = "合计";
+"total" = "总价";
+
+"Close" = "关闭";
+"Add Item" = "添加项目";
+"Summary" = "汇总";
+
+"Orange Juice" = "橙汁";
+"Tea" = "茶";
+"Coffee" = "咖啡";
+"Coke" = "快乐水";
+"Sprite" = "透心凉";
