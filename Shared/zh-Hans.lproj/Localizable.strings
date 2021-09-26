@@ -5,6 +5,7 @@
   Created by Yang Xu on 2021/6/23.
   
 */
+"FatbobBar" = "肥嘟嘟酒吧";
 "Item" = "种类";
 "Quantity" = "数量";
 "Unit Price" = "单价";
@@ -24,3 +25,7 @@
 "Coffee" = "咖啡";
 "Coke" = "快乐水";
 "Sprite" = "透心凉";
+
+"Items" = "**饮料**：";
+"Energy" = "**热量**：";
+

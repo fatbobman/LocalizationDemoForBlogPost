@@ -40,6 +40,7 @@ struct ContentView: View {
                 .font(.title)
             Spacer()
             Text(order.date,style: .date)
+            Text(order.date.formatted(.dateTime.weekday()))
         }
     }
 }

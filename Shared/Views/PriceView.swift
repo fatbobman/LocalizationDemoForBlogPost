@@ -12,11 +12,11 @@ struct PriceView: View {
     @EnvironmentObject var order: Order
     @Environment(\.locale) var locale
 
-    func currencyFormatter() -> NumberFormatter {
+    private func currencyFormatter() -> NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.maximumFractionDigits = 2
-        if locale.identifier != "zh-cn" {
+        if locale.identifier != "zh_CN" {
             formatter.locale = Locale(identifier: "en-us")
         }
         return formatter

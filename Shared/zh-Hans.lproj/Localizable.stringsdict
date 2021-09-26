@@ -7,13 +7,13 @@
 		<key>NSStringDeviceSpecificRuleType</key>
 		<dict>
 			<key>iphone</key>
-			<string>戳我再来一杯</string>
+			<string>戳我再加一种</string>
 			<key>ipad</key>
-			<string>戳我再来一杯</string>
+			<string>戳我再加一种</string>
 			<key>mac</key>
-			<string>点我再来一杯</string>
+			<string>点我再加一种</string>
 			<key>appletv</key>
-			<string>选我再来一杯</string>
+			<string>选我再加一种</string>
 		</dict>
 	</dict>
 	<key>Pay for %lld drinks</key>

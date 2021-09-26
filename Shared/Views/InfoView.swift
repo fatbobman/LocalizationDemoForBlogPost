@@ -15,6 +15,13 @@ struct InfoView:View {
     var list:String {
         order.list.map{NSLocalizedString($0.drink.name, comment: "")}.formatted(.list(type: .and))
     }
+
+    var measureFormatter:MeasurementFormatter{
+        let formatter = MeasurementFormatter()
+        formatter.unitStyle = .medium
+        return formatter
+    }
+
     var body: some View{
         NavigationView{
             VStack{
@@ -23,12 +30,12 @@ struct InfoView:View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width:100)
                 HStack{
-                    Text("Items:")
+                    Text("Items")
                     Text(list)
                 }
                 HStack{
-                    Text("Energy:")
-                    Text("\(Int(order.totalCalories))")
+                    Text("Energy")
+                    Text(order.totalCalories,formatter: measureFormatter)
                 }
                 Text(saying)
             }

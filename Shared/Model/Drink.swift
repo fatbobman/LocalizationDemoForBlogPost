@@ -9,17 +9,13 @@ import Foundation
 import SwiftUI
 
 struct Drink:Identifiable,Hashable,Comparable{
-    internal init(name: String, price: Double, calories: Double) {
+    init(name: String, price: Double, calories: Double) {
         self.name = String.localizedStringWithFormat(NSLocalizedString(name, comment: name))
         self.price = price
-        self.calories = calories
-//        self.localName = localName
-//        self.localName
+        self.calories = Measurement<UnitEnergy>(value:calories,unit: .calories)
     }
 
     static func < (lhs: Drink, rhs: Drink) -> Bool {
-//        lhs.name.stringValue() < rhs.name.stringValue()
-//        lhs.name < rhs.name
         NSLocalizedString(lhs.name,comment: "") < NSLocalizedString(rhs.name,comment: "")
     }
 
@@ -30,15 +26,14 @@ struct Drink:Identifiable,Hashable,Comparable{
     let id = UUID()
     var name:String
     let price:Double
-    let calories:Double
-//    let localName:
+    let calories:Measurement<UnitEnergy>
 
     //初始按照美元定价，热量时随便填的
-    static let juice = Drink(name: "Orange Juice", price: 4.5,calories: 120)
-    static let tea = Drink(name: "Tea", price: 4.5,calories: 30)
-    static let coffee = Drink(name: "Coffee", price: 4.2,calories: 83)
-    static let coke = Drink(name: "Coke", price: 3.5,calories: 120)
-    static let sprite = Drink(name: "Sprite", price: 3.5,calories: 120)
+    static let juice = Drink(name: "Orange Juice", price: 4.5,calories: 3 * 54.5 * 1000)
+    static let tea = Drink(name: "Tea", price: 4.5,calories: 1200)
+    static let coffee = Drink(name: "Coffee", price: 4.2,calories: 500)
+    static let coke = Drink(name: "Coke", price: 3.5,calories: 3 * 37.5 * 1000)
+    static let sprite = Drink(name: "Sprite", price: 3.5,calories: 3 * 37.5 * 1000)
 
     static let allDrinks:[Drink] = [.juice,.tea,.coke,.coffee,.sprite].sorted(by: <)
 }

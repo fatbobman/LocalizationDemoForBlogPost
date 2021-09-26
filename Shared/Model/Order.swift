@@ -22,7 +22,9 @@ class Order:Identifiable,ObservableObject{
     var tax:Double
 
     //汇率
-    static var exchangeRates:Double = 1
+    static var exchangeRates:Double{
+        Locale.current.identifier == "zh_CN" ? 6.4 : 1
+    }
 
 }
 
@@ -47,10 +49,10 @@ extension Order {
         items.values.reduce(0, +)
     }
 
-    var totalCalories:Double{
+    var totalCalories:Measurement<UnitEnergy>{
         items.keys.map{ drink in
             drink.calories * Double(items[drink] ?? 0)
-        }.reduce(0, +)
+        }.reduce(Measurement<UnitEnergy>(value: 0, unit: .calories), +)
     }
 
     struct OrderItem:Identifiable,Hashable{
@@ -59,7 +61,7 @@ extension Order {
         let quantity:Int
 
         var amount:Double{
-            drink.price * Double(quantity)
+            drink.price * Double(quantity) * Order.exchangeRates
         }
     }
 
